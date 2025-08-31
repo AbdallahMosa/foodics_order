@@ -1,4 +1,4 @@
-package com.foodics.foodicsorder.ui.theme
+package com.foodics.presentation.theme
 
 import android.app.Activity
 import android.os.Build
@@ -12,7 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
+    primary = Purple40,
     secondary = PurpleGrey80,
     tertiary = Pink80
 )

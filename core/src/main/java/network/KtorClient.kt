@@ -56,7 +56,7 @@ class KtorClient {
     }
 
     companion object {
-        private const val API_KEY = "2083fad0"
+        private const val API_KEY = "8fb91170"
         private const val API_KEY_HEADER = "X-API-Key"
     }
 }
