@@ -32,9 +32,7 @@ import utils.ssp
 fun MenuTopAppBar(modifier: Modifier = Modifier) {
     Column(
         modifier = Modifier
-            .fillMaxWidth()
-            .statusBarsPadding()
-            .padding(12.sdp),
+            .fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(5.sdp)
     ) {
         TopSection()

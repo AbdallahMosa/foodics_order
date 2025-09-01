@@ -39,7 +39,7 @@ fun MenuSearchBar(
             Text(
                 text = "Search for products or categories",
                 color = Color.Gray,
-                fontSize = 8.ssp
+                fontSize = 10.ssp
             )
         },
         leadingIcon = {
@@ -47,7 +47,7 @@ fun MenuSearchBar(
                 imageVector = Icons.Default.Search,
                 contentDescription = "Search",
                 tint = Color.Gray,
-                modifier = Modifier.size(13.sdp)
+                modifier = Modifier.size(17.sdp).padding(start = 5.sdp)
             )
         },
         singleLine = true,
@@ -68,7 +68,7 @@ fun MenuSearchBar(
         modifier = Modifier
             .fillMaxWidth()
             .border(width = 1.dp, shape = RoundedCornerShape(12.dp), color = Color.Gray.copy(0.2f))
-            .height(37.sdp)
+            .height(40.sdp)
     )
 }
 
