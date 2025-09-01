@@ -1,4 +1,4 @@
-package com.foodics.foodicsorder.ui.theme
+package com.foodics.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 

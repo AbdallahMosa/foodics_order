@@ -49,8 +49,14 @@ class KtorClient {
             defaultRequest {
                 header(HttpHeaders.ContentType, ContentType.Application.Json)
                 header(HttpHeaders.Accept, ContentType.Application.Json)
+                header(API_KEY_HEADER, API_KEY)
             }
             expectSuccess = true
         }
+    }
+
+    companion object {
+        private const val API_KEY = "8fb91170"
+        private const val API_KEY_HEADER = "X-API-Key"
     }
 }

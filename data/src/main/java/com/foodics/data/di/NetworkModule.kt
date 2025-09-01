@@ -1,8 +1,10 @@
 package com.foodics.data.di
 
 import com.foodics.core.network.KtorClient
-import network.services.ApiService
-import network.services.ApiServiceImpl
+import network.NetworkMonitor
+import org.koin.android.ext.koin.androidContext
+import services.ApiService
+import services.ApiServiceImpl
 import org.koin.dsl.module
 
 val networkModule = module {
@@ -12,7 +14,9 @@ val networkModule = module {
     single<ApiService> {
         ApiServiceImpl(
             client = get(),
-            baseUrl = "https://your-mock-api.com/api"
+            baseUrl = "https://my.api.mockaroo.com"
         )
     }
+
+    single { NetworkMonitor(androidContext()) }
 }

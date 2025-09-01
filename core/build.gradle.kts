@@ -1,7 +1,9 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -42,6 +44,11 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    //ssp
+    implementation(libs.sdp)
+    implementation(libs.ssp)
+
+
 
     // KTOR
     implementation(libs.ktor.client.core)
@@ -52,8 +59,8 @@ dependencies {
     implementation(libs.ktor.client.logging)
 
     // KOIN
-    implementation(libs.koin.android)
-    implementation(libs.koin.androidx.compose)
+    api(libs.koin.android)
+    api(libs.koin.androidx.compose)
 
     // Room
     implementation(libs.androidx.room.runtime)
