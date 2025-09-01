@@ -48,12 +48,15 @@ fun MenuItemsGrid(
 ) {
     val configuration = LocalConfiguration.current
     val screenWidth = configuration.screenWidthDp.dp
-    val itemMinWidth = 170.dp
-    val calculatedColumns = maxOf(1, (screenWidth / itemMinWidth).toInt())
-    val columns = minOf(4, calculatedColumns)
+    val gridColumns = when {
+        screenWidth >= 1200.dp -> 4
+        screenWidth >= 800 .dp-> 3
+        screenWidth >= 600.dp -> 2
+        else -> 2
+    }
 
     LazyVerticalGrid(
-        columns = GridCells.Fixed(columns),
+        columns = GridCells.Fixed(gridColumns),
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.spacedBy(12.sdp),
         horizontalArrangement = Arrangement.spacedBy(12.sdp),
