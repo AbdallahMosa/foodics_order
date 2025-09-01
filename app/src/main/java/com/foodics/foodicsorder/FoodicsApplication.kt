@@ -1,6 +1,7 @@
 package com.foodics.foodicsorder
 
 import android.app.Application
+import com.foodics.data.di.daoModule
 import com.foodics.data.di.networkModule
 import com.foodics.data.di.repositoriesModule
 import di.useCaseModule
@@ -17,6 +18,7 @@ class FoodicsApplication : Application() {
             androidContext(this@FoodicsApplication)
             modules(
                 networkModule,
+                daoModule,
                 viewModelModule,
                 repositoriesModule,
                 useCaseModule,

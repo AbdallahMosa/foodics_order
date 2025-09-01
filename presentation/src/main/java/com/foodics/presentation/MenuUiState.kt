@@ -13,7 +13,8 @@ data class MenuUiState(
     val searchTextField: String = "",
     val selectedBottomNavItem: BottomNavItem = BottomNavItem.Tables,
     val addedProductList: List<Product> = emptyList(),
-    val error: String? = null
+    val error: String? = null,
+    val isOnline : Boolean = true
 ) {
 
     private val currentProducts: List<Product>?

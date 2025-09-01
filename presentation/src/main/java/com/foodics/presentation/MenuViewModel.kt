@@ -11,12 +11,14 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import models.Category
 import models.Product
+import network.NetworkMonitor
 import use_cases.GetCategoriesUseCase
 import use_cases.GetProductsUseCase
 
 class MenuViewModel(
     private val getProductsUseCase: GetProductsUseCase,
-    private val getCategoriesUseCase: GetCategoriesUseCase
+    private val getCategoriesUseCase: GetCategoriesUseCase,
+    val networkMonitor: NetworkMonitor
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(MenuUiState())
@@ -67,7 +69,6 @@ class MenuViewModel(
             }
         }
     }
-
     private fun refreshData() {
         getProducts()
         getCategories()
